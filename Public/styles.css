@@ -1,0 +1,252 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+  }
+  
+  .wrapper {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+  }
+  
+  .header {
+    position: sticky;
+    top: 0;
+    background-color: #1e3a8a;
+    padding: 16px 0;
+    z-index: 50;
+    color: white;
+    border-bottom: 2px solid #ddd;
+  }
+  
+  .header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .logo {
+    display: flex;
+    align-items: center;
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+  
+  .logo i {
+    margin-right: 8px;
+  }
+  
+  .nav a {
+    margin-left: 20px;
+    text-decoration: none;
+    color: white;
+    font-size: 1rem;
+  }
+  
+  .nav a:hover {
+    text-decoration: underline;
+  }
+  
+  .menu-btn {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 1.5rem;
+  }
+  
+  .hero {
+    display: flex;
+    justify-content: space-between;
+    padding: 40px 0;
+    background-color: #e0f7fa;
+  }
+  
+  .hero h1 {
+    font-size: 2.5rem;
+    font-weight: bold;
+  }
+  
+  .hero p {
+    font-size: 1.2rem;
+    max-width: 600px;
+    margin-top: 16px;
+  }
+  
+  .cta-buttons {
+    margin-top: 20px;
+  }
+  
+  .btn {
+    padding: 12px 24px;
+    font-size: 1rem;
+    cursor: pointer;
+    border: none;
+    margin-right: 10px;
+  }
+  
+  .primary {
+    background-color: #1e3a8a;
+    color: white;
+  }
+  
+  .outline {
+    border: 2px solid #1e3a8a;
+    color: #1e3a8a;
+    background: transparent;
+  }
+  
+  .primary:hover {
+    background-color: #374bb5;
+  }
+  
+  .outline:hover {
+    background-color: #f1f5f8;
+  }
+  
+  .hero-image {
+    width: 50%;
+    height: auto;
+    border-radius: 8px;
+    object-fit: cover;
+  }
+  
+  .featured-books {
+    padding: 40px 0;
+    background-color: #fff;
+  }
+  
+  .featured-books h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+  }
+  
+  .book-cards {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+  }
+  
+  .card {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .card img {
+    width: 100%;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+  }
+  
+  .card-content {
+    padding: 16px;
+  }
+  
+  .card-content h3 {
+    font-size: 1.25rem;
+    margin-bottom: 8px;
+  }
+  
+  .card-content p {
+    font-size: 1rem;
+    color: #555;
+  }
+  
+  .services {
+    padding: 40px 0;
+    background-color: #e0f7fa;
+  }
+  
+  .services h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+  }
+  
+  .service-cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+  }
+  
+  .service-cards .card {
+    background-color: white;
+    padding: 20px;
+    text-align: center;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .service-cards .card i {
+    font-size: 2rem;
+    margin-bottom: 12px;
+    color: #1e3a8a;
+  }
+  
+  .newsletter {
+    padding: 40px 0;
+    text-align: center;
+    background-color: #fff;
+  }
+  
+  .newsletter h2 {
+    font-size: 2.5rem;
+  }
+  
+  .newsletter-form {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .email-input {
+    padding: 12px 24px;
+    font-size: 1rem;
+    border: 2px solid #1e3a8a;
+    border-radius: 8px;
+    width: 300px;
+  }
+  
+  .footer {
+    background-color: #1e3a8a;
+    color: white;
+    padding: 40px 0;
+  }
+  
+  .footer .footer-links {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+  
+  .footer h3 {
+    font-size: 1.5rem;
+    margin-bottom: 12px;
+  }
+  
+  .footer ul {
+    list-style-type: none;
+  }
+  
+  .footer ul li {
+    margin: 8px 0;
+  }
+  
+  .footer ul li a {
+    color: white;
+    text-decoration: none;
+  }
+  
+  .footer-bottom {
+    text-align: center;
+    margin-top: 20px;
+  }
+  
