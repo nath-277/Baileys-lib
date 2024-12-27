@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Events - Acme Library</title>
+    <script src="js/tailwind.js"></script>
+    <link rel="stylesheet" href="css/tailwind.min.css">
+    <script src="js/lucide.min.js"></script>
+</head>
+<body class="flex flex-col min-h-screen bg-gray-50">
+    <header class="px-4 lg:px-6 h-14 flex items-center bg-white shadow-sm">
+        <a href="index.html" class="flex items-center justify-center">
+            <i data-lucide="book-open" class="h-6 w-6 text-blue-600"></i>
+            <span class="text-2xl font-bold tracking-tighter sm:text-2xl ml-3 -mt-1">City Library</span>
+        </a>
+        <nav class="ml-auto flex gap-4 sm:gap-6">
+            <a href="index.html" class="text-sm font-medium hover:text-blue-600 hover:underline underline-offset-4">Home</a>
+            <a href="catalog.html" class="text-sm font-medium hover:text-blue-600 hover:underline underline-offset-4">Catalog</a>
+            <a href="events.html" class="text-sm font-medium text-blue-600 underline underline-offset-4">Events</a>
+            <a href="about.html" class="text-sm font-medium hover:text-blue-600 hover:underline underline-offset-4">About</a>
+        </nav>
+    </header>
+    <main class="flex-1">
+        <section class="w-full py-12 md:py-24 lg:py-32 bg-gradient-to-r from-blue-500 to-blue-600">
+            <div class="container px-4 md:px-6 mx-auto">
+                <h1 class="text-3xl font-bold tracking-tighter sm:text-5xl xl:text-6xl/none text-white text-center">
+                    Upcoming Events
+                </h1>
+                <p class="mt-4 text-xl text-blue-100 text-center max-w-[600px] mx-auto">
+                    Join us for exciting events, workshops, and gatherings at Acme Library
+                </p>
+            </div>
+        </section>
+        <section class="w-full py-12 md:py-24 lg:py-32 bg-white">
+            <div class="container px-4 md:px-6 mx-auto">
+                <div class="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+                    <div class="bg-white rounded-lg shadow-md overflow-hidden">
+                        <img src="/placeholder.svg?height=200&width=400" alt="Book Club Meeting" class="w-full h-48 object-cover">
+                        <div class="p-6">
+                            <h3 class="text-xl font-semibold text-blue-600 mb-2">Monthly Book Club</h3>
+                            <p class="text-gray-600 mb-4">Join us for a lively discussion of this month's selected book.</p>
+                            <div class="flex items-center text-gray-500 mb-2">
+                                <i data-lucide="calendar" class="h-5 w-5 mr-2"></i>
+                                <span>July 15, 2024</span>
+                            </div>
+                            <div class="flex items-center text-gray-500 mb-4">
+                                <i data-lucide="clock" class="h-5 w-5 mr-2"></i>
+                                <span>7:00 PM - 8:30 PM</span>
+                            </div>
+                            <a href="#" class="inline-block bg-blue-600 text-white py-2 px-4 rounded hover:bg-blue-700 transition-colors">
+                                Register
+                            </a>
+                        </div>
+                    </div>
+                    <div class="bg-white rounded-lg shadow-md overflow-hidden">
+                        <img src="/placeholder.svg?height=200&width=400" alt="Children's Storytime" class="w-full h-48 object-cover">
+                        <div class="p-6">
+                            <h3 class="text-xl font-semibold text-blue-600 mb-2">Children's Storytime</h3>
+                            <p class="text-gray-600 mb-4">Interactive storytelling session for kids aged 3-8.</p>
+                            <div class="flex items-center text-gray-500 mb-2">
+                                <i data-lucide="calendar" class="h-5 w-5 mr-2"></i>
+                                <span>July 20, 2024</span>
+                            </div>
+                            <div class="flex items-center text-gray-500 mb-4">
+                                <i data-lucide="clock" class="h-5 w-5 mr-2"></i>
+                                <span>10:00 AM - 11:00 AM</span>
+                            </div>
+                            <a href="#" class="inline-block bg-blue-600 text-white py-2 px-4 rounded hover:bg-blue-700 transition-colors">
+                                Register
+                            </a>
+                        </div>
+                    </div>
+                    <div class="bg-white rounded-lg shadow-md overflow-hidden">
+                        <img src="/placeholder.svg?height=200&width=400" alt="Author Talk" class="w-full h-48 object-cover">
+                        <div class="p-6">
+                            <h3 class="text-xl font-semibold text-blue-600 mb-2">Author Talk: Jane Smith</h3>
+                            <p class="text-gray-600 mb-4">Meet bestselling author Jane Smith and hear about her latest novel.</p>
+                            <div class="flex items-center text-gray-500 mb-2">
+                                <i data-lucide="calendar" class="h-5 w-5 mr-2"></i>
+                                <span>July 25, 2024</span>
+                            </div>
+                            <div class="flex items-center text-gray-500 mb-4">
+                                <i data-lucide="clock" class="h-5 w-5 mr-2"></i>
+                                <span>6:30 PM - 8:00 PM</span>
+                            </div>
+                            <a href="#" class="inline-block bg-blue-600 text-white py-2 px-4 rounded hover:bg-blue-700 transition-colors">
+                                Register
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="w-full py-12 md:py-24 lg:py-32 bg-blue-50">
+            <div class="container px-4 md:px-6 mx-auto">
+                <h2 class="text-3xl font-bold tracking-tighter sm:text-4xl text-blue-600 text-center mb-8">Upcoming Workshops</h2>
+                <div class="space-y-8">
+                    <div class="bg-white rounded-lg shadow-md p-6">
+                        <h3 class="text-xl font-semibold text-blue-600 mb-2">Digital Literacy Workshop</h3>
+                        <p class="text-gray-600 mb-4">Learn essential computer skills in this beginner-friendly workshop.</p>
+                        <div class="flex items-center text-gray-500 mb-2">
+                            <i data-lucide="calendar" class="h-5 w-5 mr-2"></i>
+                            <span>August 5, 2024</span>
+                        </div>
+                        <div class="flex items-center text-gray-500 mb-4">
+                            <i data-lucide="clock" class="h-5 w-5 mr-2"></i>
+                            <span>2:00 PM - 4:00 PM</span>
+                        </div>
+                        <a href="#" class="inline-block bg-blue-600 text-white py-2 px-4 rounded hover:bg-blue-700 transition-colors">
+                            Learn More
+                        </a>
+                    </div>
+                    <div class="bg-white rounded-lg shadow-md p-6">
+                        <h3 class="text-xl font-semibold text-blue-600 mb-2">Creative Writing Series</h3>
+                        <p class="text-gray-600 mb-4">A four-week workshop to help you kickstart your writing journey.</p>
+                        <div class="flex items-center text-gray-500 mb-2">
+                            <i data-lucide="calendar" class="h-5 w-5 mr-2"></i>
+                            <span>Every Tuesday in August</span>
+                        </div>
+                        <div class="flex items-center text-gray-500 mb-4">
+                            <i data-lucide="clock" class="h-5 w-5 mr-2"></i>
+                            <span>6:00 PM - 7:30 PM</span>
+                        </div>
+                        <a href="#" class="inline-block bg-blue-600 text-white py-2 px-4 rounded hover:bg-blue-700 transition-colors">
+                            Learn More
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="w-full py-12 md:py-24 lg:py-32 bg-white">
+            <div class="container px-4 md:px-6 mx-auto text-center">
+                <h2 class="text-3xl font-bold tracking-tighter sm:text-4xl text-blue-600 mb-4">Stay Informed</h2>
+                <p class="text-xl text-gray-600 mb-8">Subscribe to our newsletter for the latest event updates and library news.</p>
+                <form class="max-w-md mx-auto">
+                    <div class="flex gap-2">
+                        <input type="email" placeholder="Enter your email" class="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 flex-grow" required>
+                        <button type="submit" class="inline-flex items-center justify-center rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 bg-blue-600 text-white hover:bg-blue-700 h-10 px-4 py-2">
+                            Subscribe
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </section>
+    </main>
+    <footer class="flex flex-col gap-2 sm:flex-row py-6 w-full shrink-0 items-center px-4 md:px-6 border-t bg-white">
+        <p class="text-xs text-gray-500">© 2024 Acme Library. All rights reserved.</p>
+        <nav class="sm:ml-auto flex gap-4 sm:gap-6">
+            <a class="text-xs hover:underline underline-offset-4 text-blue-600" href="#">Terms of Service</a>
+            <a class="text-xs hover:underline underline-offset-4 text-blue-600" href="#">Privacy</a>
+        </nav>
+    </footer>
+    <script>
+        lucide.createIcons();
+    </script>
+</body>
+</html>

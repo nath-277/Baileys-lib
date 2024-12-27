@@ -1,0 +1,258 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catalog - Acme Library</title>
+    <script src="js/tailwind.js"></script>
+    <link rel="stylesheet" href="css/tailwind.min.css">
+    <script src="js/lucide.min.js"></script>
+</head>
+<body class="flex flex-col min-h-screen bg-gray-50">
+    <header class="px-4 lg:px-6 h-14 flex items-center bg-white shadow-sm">
+        <a href="index.html" class="flex items-center justify-center">
+            <i data-lucide="book-open" class="h-6 w-6 text-blue-600"></i>
+            <span class="text-2xl font-bold tracking-tighter sm:text-2xl ml-3 -mt-1">City Library</span>
+        </a>
+        <nav class="ml-auto flex gap-4 sm:gap-6">
+            <a href="index.html" class="text-sm font-medium hover:text-blue-600 hover:underline underline-offset-4">Home</a>
+            <a href="catalog.html" class="text-sm font-medium text-blue-600 underline underline-offset-4">Catalog</a>
+            <a href="events.html" class="text-sm font-medium hover:text-blue-600 hover:underline underline-offset-4">Events</a>
+            <a href="about.html" class="text-sm font-medium hover:text-blue-600 hover:underline underline-offset-4">About</a>
+        </nav>
+    </header>
+    <main class="flex-1 py-6 px-4 md:px-6">
+        <div class="max-w-7xl mx-auto space-y-6">
+            <div class="relative">
+                <input
+                    type="text"
+                    id="searchInput"
+                    placeholder="Search title name here..."
+                    class="w-full h-12 pl-4 pr-12 rounded-lg border border-gray-300 focus:outline-none focus:border-blue-500"
+                >
+                <button 
+                    class="absolute right-2 top-1/2 -translate-y-1/2 bg-blue-600 text-white px-6 py-2 rounded-md hover:bg-blue-700 transition-colors"
+                    onclick="handleSearch()"
+                >
+                    Search
+                </button>
+            </div>
+
+            <div class="flex flex-wrap gap-2" id="categoryFilters">
+                <button 
+                    class="px-4 py-2 rounded-full bg-blue-600 text-white hover:bg-blue-700 transition-colors"
+                    data-category="all"
+                >
+                    All
+                </button>
+                <button 
+                    class="px-4 py-2 rounded-full bg-white text-blue-600 hover:bg-blue-50 transition-colors"
+                    data-category="basic"
+                >
+                    Basic
+                </button>
+                <button 
+                    class="px-4 py-2 rounded-full bg-white text-blue-600 hover:bg-blue-50 transition-colors"
+                    data-category="it"
+                >
+                    IT
+                </button>
+                <button 
+                    class="px-4 py-2 rounded-full bg-white text-blue-600 hover:bg-blue-50 transition-colors"
+                    data-category="cse"
+                >
+                    CSE
+                </button>
+                <button 
+                    class="px-4 py-2 rounded-full bg-white text-blue-600 hover:bg-blue-50 transition-colors"
+                    data-category="ise"
+                >
+                    ISE
+                </button>
+                <button 
+                    class="px-4 py-2 rounded-full bg-white text-blue-600 hover:bg-blue-50 transition-colors"
+                    data-category="novel"
+                >
+                    Novel
+                </button>
+                <button 
+                    class="px-4 py-2 rounded-full bg-white text-blue-600 hover:bg-blue-50 transition-colors"
+                    data-category="fantasy"
+                >
+                    Fantasy
+                </button>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6" id="bookGrid">
+                <!-- Books will be dynamically inserted here -->
+            </div>
+        </div>
+    </main>
+    <footer class="flex flex-col gap-2 sm:flex-row py-6 w-full shrink-0 items-center px-4 md:px-6 border-t bg-white">
+        <p class="text-xs text-gray-500">© 2024 Acme Library. All rights reserved.</p>
+        <nav class="sm:ml-auto flex gap-4 sm:gap-6">
+            <a class="text-xs hover:underline underline-offset-4 text-blue-600" href="#">Terms of Service</a>
+            <a class="text-xs hover:underline underline-offset-4 text-blue-600" href="#">Privacy</a>
+        </nav>
+    </footer>
+
+    <script>
+        // Initialize Lucide icons
+        lucide.createIcons();
+
+        // Book data
+        const books = [
+            {
+                title: "NCERT",
+                author: "P.JAGADEESH",
+                category: "BASIC",
+                date: "2022-01-31",
+                image: "img/NCER.jpg"
+            },
+            {
+                title: "CRYPTOGRAPHY",
+                author: "P.J.BOSE",
+                category: "IT",
+                date: "2022-11-11",
+                image: "img/crypto.jpg"
+            },
+            {
+                title: "DBMS",
+                author: "KAVERI S",
+                category: "IT",
+                date: "2022-12-22",
+                image: "img/Database.jpg"
+            },
+            {
+                title: "COMPUTER NETWORKS AND SECURITY",
+                author: "PRIYANKA",
+                category: "CSE",
+                date: "2022-03-20",
+                image: "img/cns.jpg"
+            },
+            {
+                title: "MENTAL PEACE",
+                author: "PUTIN",
+                category: "NOVEL",
+                date: "2022-11-10",
+                image: "img/Network.jpg"
+            },
+            {
+                title: "ARTIFICIAL INTELLIGENCE",
+                author: "HARISH P",
+                category: "ISE",
+                date: "2022-12-20",
+                image: "img/Os.jpg"
+            },
+            {
+                title: "SYSTEM DESIGN",
+                author: "AMARNADH.W",
+                category: "CSE",
+                date: "2022-12-20",
+                image: "img/Sdesign.jpg"
+            },
+            {
+                title: "MATHEMATICS",
+                author: "HARIKRISHNA",
+                category: "BASIC",
+                date: "2022-01-21",
+                image: "img/Maths.jpg"
+            },
+            {
+                title: "HARRY POTTER",
+                author: "J.K. ROWLING",
+                category: "FANTASY",
+                date: "1999-12-20",
+                image: "img/hp.jpg"
+            },
+            {
+                title: "OPERATING SYSTEM",
+                author: "RAMA KRISHNA K",
+                category: "CSE",
+                date: "2022-04-20",
+                image: "img/Nt.jpg"
+            },
+            {
+                title: "ATOMIC HABBITS",
+                author: "JEEVAN E",
+                category: "NOVEL",
+                date: "1995-12-22",
+                image: "img/ah.jpg"
+            },
+            {
+                title: "HOW TO WIN FRIENDS AND INFLUENCE PEOPLE",
+                author: "LEHAN FAYAZ",
+                category: "NOVEL",
+                date: "2002-02-02",
+                image: "img/htw.jpeg"
+            }
+        ];
+
+        // Current filter state
+        let currentCategory = 'all';
+        let searchQuery = '';
+
+        // Function to create a book card
+        function createBookCard(book) {
+            return `
+                <div class="bg-white rounded-lg shadow-md overflow-hidden transition-transform hover:scale-105">
+                    <img src="${book.image}" alt="${book.title}" class="w-full h-48 object-cover">
+                    <div class="p-4">
+                        <h3 class="font-semibold text-lg text-blue-600 mb-2">${book.title}</h3>
+                        <p class="text-gray-600 mb-1">Author: ${book.author}</p>
+                        <p class="text-gray-600 mb-1">Category: ${book.category}</p>
+                        <p class="text-gray-600">${new Date(book.date).toLocaleDateString()}</p>
+                    </div>
+                </div>
+            `;
+        }
+
+        // Function to filter and display books
+        function filterAndDisplayBooks() {
+            const filteredBooks = books.filter(book => {
+                const matchesCategory = currentCategory === 'all' || book.category.toLowerCase() === currentCategory;
+                const matchesSearch = book.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
+                                   book.author.toLowerCase().includes(searchQuery.toLowerCase());
+                return matchesCategory && matchesSearch;
+            });
+
+            const bookGrid = document.getElementById('bookGrid');
+            bookGrid.innerHTML = filteredBooks.map(createBookCard).join('');
+        }
+
+        // Function to handle search
+        function handleSearch() {
+            searchQuery = document.getElementById('searchInput').value;
+            filterAndDisplayBooks();
+        }
+
+        // Add event listeners to category filters
+        document.getElementById('categoryFilters').addEventListener('click', (e) => {
+            if (e.target.tagName === 'BUTTON') {
+                // Update active state of buttons
+                document.querySelectorAll('#categoryFilters button').forEach(btn => {
+                    btn.classList.remove('bg-blue-600', 'text-white');
+                    btn.classList.add('bg-white', 'text-blue-600');
+                });
+                e.target.classList.remove('bg-white', 'text-blue-600');
+                e.target.classList.add('bg-blue-600', 'text-white');
+
+                // Update current category and filter books
+                currentCategory = e.target.dataset.category;
+                filterAndDisplayBooks();
+            }
+        });
+
+        // Add event listener for search input
+        document.getElementById('searchInput').addEventListener('keypress', (e) => {
+            if (e.key === 'Enter') {
+                handleSearch();
+            }
+        });
+
+        // Initial display of books
+        filterAndDisplayBooks();
+    </script>
+</body>
+</html>

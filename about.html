@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About City Library</title>
+    <script src="js/tailwind.js"></script>
+    <link rel="stylesheet" href="css/tailwind.min.css">
+    <script src="js/lucide.min.js"></script>
+</head>
+<body class="flex flex-col min-h-screen bg-gray-50">
+    <header class="px-4 lg:px-6 h-14 flex items-center bg-white shadow-sm">
+        <a href="index.html" class="flex items-center justify-center">
+            <i data-lucide="book-open" class="h-6 w-6 text-blue-600"></i>
+            <span class="text-2xl font-bold tracking-tighter sm:text-2xl ml-3 -mt-1">City Library</span>
+        </a>
+        <nav class="ml-auto flex gap-4 sm:gap-6">
+            <a href="index.html" class="text-sm font-medium hover:text-blue-600 hover:underline underline-offset-4">Home</a>
+            <a href="catalog.html" class="text-sm font-medium hover:text-blue-600 hover:underline underline-offset-4">Catalog</a>
+            <a href="events" class="text-sm font-medium hover:text-blue-600 hover:underline underline-offset-4">Events</a>
+            <a href="about.html" class="text-sm font-medium text-blue-600 underline underline-offset-4">About</a>
+        </nav>
+    </header>
+    <main class="flex-1">
+        <section class="w-full py-12 md:py-24 lg:py-32 bg-gradient-to-r from-blue-500 to-blue-600">
+            <div class="container px-4 md:px-6 mx-auto">
+                <h1 class="text-3xl font-bold tracking-tighter sm:text-5xl xl:text-6xl/none text-white text-center">
+                    About City Library
+                </h1>
+            </div>
+        </section>
+        <section class="w-full py-12 md:py-24 lg:py-32 bg-white">
+            <div class="container px-4 md:px-6 mx-auto">
+                <div class="grid gap-6 lg:grid-cols-2 lg:gap-12 items-center">
+                    <div class="space-y-4">
+                        <h2 class="text-3xl font-bold tracking-tighter sm:text-4xl text-blue-600">Our Mission</h2>
+                        <p class="text-gray-600 text-lg">
+                            At City Library, our mission is to foster a love for learning, provide access to knowledge, and create a welcoming space for our community. We believe in the power of books to educate, inspire, and transform lives.
+                        </p>
+                    </div>
+                    <div class="flex justify-center">
+                        <img src="/placeholder.svg?height=400&width=600" alt="Library Interior" class="rounded-lg shadow-md object-cover" width="600" height="400">
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="w-full py-12 md:py-24 lg:py-32 bg-blue-50">
+            <div class="container px-4 md:px-6 mx-auto">
+                <h2 class="text-3xl font-bold tracking-tighter sm:text-4xl text-blue-600 text-center mb-8">Our History</h2>
+                <div class="space-y-4 max-w-3xl mx-auto text-center">
+                    <p class="text-gray-600">
+                        Founded in 1950, City Library has been serving our community for over 70 years. What started as a small collection of books in a single room has grown into a comprehensive resource center with over 100,000 items in our catalog.
+                    </p>
+                    <p class="text-gray-600">
+                        Throughout the years, we've adapted to changing technologies and community needs, always striving to provide the best possible service to our patrons.
+                    </p>
+                </div>
+            </div>
+        </section>
+        <section class="w-full py-12 md:py-24 lg:py-32 bg-white">
+            <div class="container px-4 md:px-6 mx-auto">
+                <h2 class="text-3xl font-bold tracking-tighter sm:text-4xl text-blue-600 text-center mb-12">Our Team</h2>
+                <div class="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+                    <div class="flex flex-col items-center space-y-4">
+                        <img src="/placeholder.svg?height=150&width=150" alt="Jane Doe" class="w-32 h-32 rounded-full object-cover">
+                        <h3 class="text-xl font-semibold text-blue-600">Jane Doe</h3>
+                        <p class="text-gray-600">Library Director</p>
+                    </div>
+                    <div class="flex flex-col items-center space-y-4">
+                        <img src="/placeholder.svg?height=150&width=150" alt="John Smith" class="w-32 h-32 rounded-full object-cover">
+                        <h3 class="text-xl font-semibold text-blue-600">John Smith</h3>
+                        <p class="text-gray-600">Head Librarian</p>
+                    </div>
+                    <div class="flex flex-col items-center space-y-4">
+                        <img src="/placeholder.svg?height=150&width=150" alt="Emily Brown" class="w-32 h-32 rounded-full object-cover">
+                        <h3 class="text-xl font-semibold text-blue-600">Emily Brown</h3>
+                        <p class="text-gray-600">Community Outreach Coordinator</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="w-full py-12 md:py-24 lg:py-32 bg-blue-50">
+            <div class="container px-4 md:px-6 mx-auto">
+                <h2 class="text-3xl font-bold tracking-tighter sm:text-4xl text-blue-600 text-center mb-8">Visit Us</h2>
+                <div class="grid gap-6 lg:grid-cols-2 lg:gap-12">
+                    <div class="space-y-4">
+                        <h3 class="text-xl font-semibold text-blue-600">Address</h3>
+                        <p class="text-gray-600">
+                            123 Library Street<br>
+                            Booktown, BT 12345
+                        </p>
+                        <h3 class="text-xl font-semibold text-blue-600">Hours</h3>
+                        <p class="text-gray-600">
+                            Monday - Friday: 8:00 AM - 10:00 PM<br>
+                            Saturday: 9:00 AM - 8:00 PM<br>
+                            Sunday: 10:00 AM - 6:00 PM
+                        </p>
+                        <h3 class="text-xl font-semibold text-blue-600">Contact</h3>
+                        <p class="text-gray-600">
+                            Phone: (555) 123-4567<br>
+                            Email: info@acmelibrary.com
+                        </p>
+                    </div>
+                    <div class="flex justify-center items-center">
+                        <img src="/placeholder.svg?height=300&width=500" alt="Map" class="rounded-lg shadow-md object-cover" width="500" height="300">
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer class="flex flex-col gap-2 sm:flex-row py-6 w-full shrink-0 items-center px-4 md:px-6 border-t bg-white">
+        <p class="text-xs text-gray-500">© 2024 Acme Library. All rights reserved.</p>
+        <nav class="sm:ml-auto flex gap-4 sm:gap-6">
+            <a class="text-xs hover:underline underline-offset-4 text-blue-600" href="#">Terms of Service</a>
+            <a class="text-xs hover:underline underline-offset-4 text-blue-600" href="#">Privacy</a>
+        </nav>
+    </footer>
+    <script>
+        lucide.createIcons();
+    </script>
+</body>
+</html>

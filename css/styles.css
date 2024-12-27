@@ -1,0 +1,259 @@
+/* General Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background-color: #f5f8ff;
+  color: #110f29;
+  line-height: 1.6;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.hidden {
+  display: none;
+}
+
+.wrapper {
+  width: 95%;
+  margin: 0 auto;
+}
+
+/* Header */
+header {
+  padding: 0 1rem;
+  height: 4rem;
+  display: flex;
+  align-items: center;
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+header a {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+header a i {
+  color: #6759ff;
+}
+
+header nav {
+  margin-left: auto;
+  display: flex;
+  gap: 1.5rem;
+}
+
+header nav a {
+  font-size: 0.9rem;
+  font-weight: 500;
+  transition: color 0.3s ease, text-decoration 0.3s ease;
+}
+
+header nav a:hover {
+  color: #6759ff;
+  text-decoration: underline;
+}
+
+#mobile-menu {
+  display: none;
+}
+
+#mobile-menu-button {
+  margin-left: auto;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+#mobile-menu-button i {
+  font-size: 1.5rem;
+  color: #6759ff;
+}
+
+@media (max-width: 768px) {
+  nav {
+    display: none;
+  }
+
+  #mobile-menu {
+    display: block;
+    position: absolute;
+    top: 4rem;
+    right: 1rem;
+    background: #fff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 1rem;
+    border-radius: 0.5rem;
+    z-index: 10;
+  }
+
+  #mobile-menu a {
+    display: block;
+    margin-bottom: 1rem;
+    font-size: 0.9rem;
+  }
+
+  #mobile-menu a:last-child {
+    margin-bottom: 0;
+  }
+}
+
+/* Search Bar */
+#search-container {
+  margin: 1rem 0;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+#search-container input {
+  flex: 1;
+  padding: 0.8rem;
+  border: 2px solid #ddd;
+  border-radius: 0.5rem;
+  transition: border-color 0.3s ease;
+}
+
+#search-container input:focus {
+  border-color: #6759ff;
+}
+
+#search-container button {
+  padding: 0.8rem 1.5rem;
+  background-color: #6759ff;
+  color: #fff;
+  border: none;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+#search-container button:hover {
+  background-color: #5947cc;
+}
+
+/* Filter Buttons */
+#buttons {
+  margin-top: 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.button-value {
+  padding: 0.5rem 1rem;
+  border: 2px solid #6759ff;
+  background-color: transparent;
+  color: #6759ff;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.button-value:hover,
+.button-value.active {
+  background-color: #6759ff;
+  color: #fff;
+}
+
+/* Book Cards */
+#Books {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.card {
+  background: #fff;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.card img {
+  width: 100%;
+  height: 12rem;
+  object-fit: cover;
+  border-radius: 0.5rem;
+}
+
+.card h5 {
+  margin: 0.5rem 0;
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+.card p {
+  font-size: 0.9rem;
+  color: #555;
+}
+
+.hide {
+  display: none;
+}
+
+/* Footer */
+footer {
+  background: #000;
+  color: #aaa;
+  text-align: center;
+  padding: 1rem 0;
+  margin-top: 2rem;
+}
+
+footer a {
+  color: #aaa;
+  transition: color 0.3s ease;
+}
+
+footer a:hover {
+  color: #fff;
+}
+
+footer .row {
+  margin: 0.5rem 0;
+}
+
+footer ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+footer ul li {
+  display: inline;
+}
+
+footer i {
+  font-size: 1.5rem;
+  margin-right: 0.5rem;
+  transition: color 0.3s ease;
+}
+
+footer i:hover {
+  color: #6759ff;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  #Books {
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  }
+
+  footer ul {
+    flex-direction: column;
+  }
+}
