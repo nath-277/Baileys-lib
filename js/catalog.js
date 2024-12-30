@@ -4,7 +4,7 @@
         // Book data
         const books = [
             {
-                title: "NCERT",
+                title: "CHEMISTRY",
                 author: "P.JAGADEESH",
                 category: "BASIC",
                 date: "2022-01-31",
@@ -98,6 +98,30 @@
                 date: "2002-02-02",
                 image: "img/htw.jpeg",
                 description: "Classic guide to relationships"
+            },
+            {
+                title: "Image Processing",
+                author: "BHANU CHANDAR",
+                category: "ISE",
+                date:  "2021-12-20",
+                image: "img/wta.jpg",
+                description: "Image processing simplified"
+            },
+            {
+                title: "Physics",
+                author: "Nischitha E",
+                category: "Basic",
+                date:  "2022-12-20",
+                image: "img/Ncert.jpg",
+                description: "Comprehensive guide for students"
+            },
+            {
+                title: "UNIX",
+                author: "Aakash chopra",
+                category: "IT",
+                date: "2022-08-08",
+                image: "img/Nt.jpg" ,
+                description: "Unix guide for students"
             }
         ];
 
