@@ -3,40 +3,36 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Events - Acme Library</title>
+    <title>Events - City Library</title>
     <script src="js/tailwind.js"></script>
-    <link rel="stylesheet" href="css/tailwind.min.css">
+    <link href="css/tailwind.min.css" rel="stylesheet">
     <script src="js/lucide.min.js"></script>
 </head>
 <body class="flex flex-col min-h-screen bg-gray-50">
-    <header class="px-4 lg:px-6 h-16 flex items-center bg-white shadow-sm">
-        <a href="#" class="flex items-center justify-center">
-            <i data-lucide="book-open" class="h-6 w-6 text-blue-600"></i>
-            <span class="text-2xl font-bold tracking-tighter sm:text-2xl ml-3 -mt-1">City Library</span>
-        </a>
-        <nav class="ml-auto flex gap-4 sm:gap-6 hidden lg:flex">
-            <a href="index.html"
-                class="text-sm font-medium hover:text-blue-600 hover:underline underline-offset-4">Home</a>
-            <a href="catalog.html" class="text-sm font-medium hover:text-blue-600 hover:underline underline-offset-4">Catalog</a>
-            <a href="events.html" class="text-sm font-medium hover:text-blue-600 hover:underline underline-offset-4">Events</a>
-            <a href="about.html" class="text-sm font-medium hover:text-blue-600 hover:underline underline-offset-4">About</a>
-        </nav>
-        <!-- Mobile Navigation Menu (Hamburger) -->
-        <button class="lg:hidden flex ml-auto" id="mobile-menu-button">
-            <i class="w-6 h-6 text-blue-600">☰</i>
-        </button>
-        <!-- Mobile Menu (Hidden by default) -->
-        <div id="mobile-menu" class="lg:hidden hidden absolute top-14 right-4 bg-white shadow-lg rounded-lg w-48 p-4">
-            <a href="index.html"
-                class="block text-sm font-medium hover:text-blue-600 hover:underline underline-offset-4 py-2">Home</a>
-            <a href="catalog.html"
-                class="block text-sm font-medium hover:text-blue-600 hover:underline underline-offset-4 py-2">Catalog</a>
-            <a href="events.html"
-                class="block text-sm font-medium hover:text-blue-600 hover:underline underline-offset-4 py-2">Events</a>
-            <a href="about.html"
-                class="block text-sm font-medium hover:text-blue-600 hover:underline underline-offset-4 py-2">About</a>
-        </div>
-    </header>
+    <header class="px-4 lg:px-6 h-14 flex items-center bg-white shadow-sm relative z-10">
+    <a href="index.html" class="flex items-center justify-center gap-2">
+        <i data-lucide="book-open" class="h-6 w-6 text-blue-600"></i>
+        <span class="text-2xl font-bold tracking-tighter sm:text-2xl ml-1 -mt-1">City Library</span>
+    </a>
+    <button id="mobile-menu-button" class="ml-auto lg:hidden">
+        <i data-lucide="menu" class="h-6 w-6 text-blue-600"></i>
+    </button>
+    <nav id="desktop-menu" class="hidden lg:flex ml-auto gap-4 sm:gap-6">
+        <a href="index.html" class="text-sm font-medium hover:text-blue-600 hover:underline underline-offset-4">Home</a>
+        <a href="catalog.html" class="text-sm font-medium hover:text-blue-600 hover:underline underline-offset-4">Catalog</a>
+        <a href="events.html" class="text-sm font-medium text-blue-600 underline underline-offset-4">Events</a>
+        <a href="about.html" class="text-sm font-medium hover:text-blue-600 hover:underline underline-offset-4">About</a>
+    </nav>
+</header>
+
+<div id="mobile-menu" class="lg:hidden bg-white shadow-md absolute top-14 left-0 right-0 z-20 hidden">
+    <nav class="flex flex-col p-4">
+        <a href="index.html" class="text-sm font-medium py-2 hover:text-blue-600">Home</a>
+        <a href="catalog.html" class="text-sm font-medium py-2 hover:text-blue-600">Catalog</a>
+        <a href="events.html" class="text-sm font-medium py-2 text-blue-600">Events</a>
+        <a href="about.html" class="text-sm font-medium py-2 hover:text-blue-600">About</a>
+    </nav>
+</div>
     <main class="flex-1">
         <section class="w-full py-12 md:py-24 lg:py-32 bg-gradient-to-r from-blue-500 to-blue-600">
             <div class="container px-4 md:px-6 mx-auto">
@@ -44,7 +40,7 @@
                     Upcoming Events
                 </h1>
                 <p class="mt-4 text-xl text-blue-100 text-center max-w-[600px] mx-auto">
-                    Join us for exciting events, workshops, and gatherings at Acme Library
+                    Join us for exciting events, workshops, and gatherings at City Library
                 </p>
             </div>
         </section>
@@ -52,7 +48,7 @@
             <div class="container px-4 md:px-6 mx-auto">
                 <div class="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
                     <div class="bg-white rounded-lg shadow-md overflow-hidden">
-                        <img src="/placeholder.svg?height=200&width=400" alt="Book Club Meeting" class="w-full h-48 object-cover">
+                        <img src="img/Book-Club.jpg" alt="Book Club Meeting" class="w-full h-48 object-cover">
                         <div class="p-6">
                             <h3 class="text-xl font-semibold text-blue-600 mb-2">Monthly Book Club</h3>
                             <p class="text-gray-600 mb-4">Join us for a lively discussion of this month's selected book.</p>
@@ -70,7 +66,7 @@
                         </div>
                     </div>
                     <div class="bg-white rounded-lg shadow-md overflow-hidden">
-                        <img src="/placeholder.svg?height=200&width=400" alt="Children's Storytime" class="w-full h-48 object-cover">
+                        <img src="img/Storytime.jpg" alt="Children's Storytime" class="w-full h-48 object-cover">
                         <div class="p-6">
                             <h3 class="text-xl font-semibold text-blue-600 mb-2">Children's Storytime</h3>
                             <p class="text-gray-600 mb-4">Interactive storytelling session for kids aged 3-8.</p>
@@ -88,7 +84,7 @@
                         </div>
                     </div>
                     <div class="bg-white rounded-lg shadow-md overflow-hidden">
-                        <img src="/placeholder.svg?height=200&width=400" alt="Author Talk" class="w-full h-48 object-cover">
+                        <img src="img/Pep-talk.jpg" alt="Author Talk" class="w-full h-48 object-cover">
                         <div class="p-6">
                             <h3 class="text-xl font-semibold text-blue-600 mb-2">Author Talk: Jane Smith</h3>
                             <p class="text-gray-600 mb-4">Meet bestselling author Jane Smith and hear about her latest novel.</p>
@@ -161,15 +157,13 @@
         </section>
     </main>
     <footer class="flex flex-col gap-2 sm:flex-row py-6 w-full shrink-0 items-center px-4 md:px-6 border-t bg-white">
-        <p class="text-xs text-gray-500">© 2024 Acme Library. All rights reserved.</p>
+        <p class="text-xs text-gray-500">© 2024 City Library. All rights reserved.</p>
         <nav class="sm:ml-auto flex gap-4 sm:gap-6">
             <a class="text-xs hover:underline underline-offset-4 text-blue-600" href="#">Terms of Service</a>
             <a class="text-xs hover:underline underline-offset-4 text-blue-600" href="#">Privacy</a>
         </nav>
     </footer>
-    <script>
-        lucide.createIcons();
-    </script>
-    <script src="js/script.js"></script>
+    <script src="js/script.js">
+</script>
 </body>
 </html>
