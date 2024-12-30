@@ -8,7 +8,7 @@
                 author: "P.JAGADEESH",
                 category: "BASIC",
                 date: "2022-01-31",
-                image: "img/Ncer.jpg",
+                image: "img/NCER.jpg",
                 description: "Comprehensive guide for students"
             },
             {
